@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+header, footer {
+    text-align: center;
+}
+
+header {
+    background-color: rgb(132, 165, 255);
+    padding: 30px;
+    box-shadow: 0 0px 7px;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+
+main {
+    padding-top: 20px;
+    padding-bottom: 40%;
+}
+
+footer {
+    background-color: dimgrey;
+    padding: 30px;
+    color: white;
+}

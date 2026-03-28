@@ -41,8 +41,6 @@ header {
     color: var(--white);
     padding: 18px;
     box-shadow: 0 6px 18px rgba(37, 17, 68, 0.28);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     text-align: center;
 }
 
@@ -56,6 +54,14 @@ header img {
     height: auto;
     display: block;
     margin: 0;
+}
+
+footer {
+    background: linear-gradient(135deg, #251144, #5a2f8a);
+    color: var(--white);
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(37, 17, 68, 0.28);
+    text-align: center;
 }
 
 .login-card {

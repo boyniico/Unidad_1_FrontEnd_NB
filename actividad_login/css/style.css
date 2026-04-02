@@ -40,7 +40,7 @@ header {
     background: linear-gradient(135deg, #251144, #5a2f8a);
     color: var(--white);
     padding: 18px;
-    box-shadow: 0 6px 18px rgba(37, 17, 68, 0.7);
+    box-shadow: 0 6px 18px #251144b3;
     text-align: center;
     border-bottom: 5px solid var(--accent);
 }
@@ -64,6 +64,7 @@ footer {
     box-shadow: 0 6px 18px rgba(37, 17, 68, 0.28);
     text-align: center;
     border-top: 5px solid var(--accent);
+    box-shadow: 0 -6px 18px #251144b3;
 }
 
 .login-card {

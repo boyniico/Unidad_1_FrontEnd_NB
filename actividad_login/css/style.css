@@ -15,7 +15,7 @@
 
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at top left, #f7f3ea, #ffffff);
+    background: radial-gradient(circle at top left, var(--primary), var(--secondary));
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     color: var(--text-main);
     display: flex;
@@ -40,8 +40,9 @@ header {
     background: linear-gradient(135deg, #251144, #5a2f8a);
     color: var(--white);
     padding: 18px;
-    box-shadow: 0 6px 18px rgba(37, 17, 68, 0.28);
+    box-shadow: 0 6px 18px rgba(37, 17, 68, 0.7);
     text-align: center;
+    border-bottom: 5px solid var(--accent);
 }
 
 header a {
@@ -62,6 +63,7 @@ footer {
     padding: 18px;
     box-shadow: 0 6px 18px rgba(37, 17, 68, 0.28);
     text-align: center;
+    border-top: 5px solid var(--accent);
 }
 
 .login-card {
@@ -70,7 +72,7 @@ footer {
     background-color: var(--white);
     padding: 2rem;
     border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(37, 17, 68, 0.12);
+    box-shadow: 0 10px 30px rgba(37, 17, 68, 0.8);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -86,6 +88,7 @@ footer {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--primary);
+    width: 50%;
 }
 
 .form-group input {
@@ -98,6 +101,10 @@ footer {
     background-color: #faf8fd;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; 
+}
+
+.form-group input:hover {
+    border-color: var(--secondary);
 }
 
 .form-group input:focus {
@@ -116,12 +123,13 @@ footer {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
 }
 
 .login-card button:hover {
     opacity: 0.95;
     transform: translateY(-1px);
+    color: #f8b627;
 }
 
 .login-links {
@@ -140,8 +148,8 @@ footer {
     transition: color 0.2s ease;
 }
 
-label {
-    width: 50%;
+.login-links a:hover {
+    color: #f8b627;
 }
 
 h1 {

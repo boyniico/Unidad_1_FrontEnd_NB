@@ -139,3 +139,12 @@ footer {
     font-weight: 500;
     transition: color 0.2s ease;
 }
+
+label {
+    width: 50%;
+}
+
+h1 {
+    align-self: center;
+    font-size: 2rem;
+}

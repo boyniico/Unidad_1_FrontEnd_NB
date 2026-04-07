@@ -66,15 +66,18 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
 }
 #form-section{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  max-width: 400px;
+  max-width: 550px;
   width: 100%;
+}
+#form-section h1{
+  align-self: flex-start;
+  font-size: 40px;
 }
 .label-input{
   display: flex;
@@ -106,6 +109,7 @@ main{
   text-shadow: var(--font-shadow);
   color: var(--pretty-black-2);
   font-size: 20px;
+  width: fit-content;
 }
 .label-input input:focus{
   border-radius: 10px;
@@ -123,4 +127,9 @@ main{
 }
 footer{
     border-top: var(--border-5px-solid-amber-flame);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dim-snow);
+    margin-top: 2rem;
 }

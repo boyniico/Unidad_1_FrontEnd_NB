@@ -14,9 +14,12 @@
 --dim-purple: #653a99;
 --ocean-blue: #492699;
 --outline-pink: #B899DB;
+--outline-dim-pink-dimopasity: #c6aae9a8;
 --dim-ocean-blue: #201140;
 --pretty-black: #0D0D0D;
+--pretty-black-2: #1f1f1f;
 --border-5px-solid-amber-flame: 5px solid var(--amber-flame);
+--font-shadow: 0 2px 15px #00000033;
 input, button{
   all: unset;
   box-sizing: border-box;
@@ -31,6 +34,7 @@ body{
   align-items: center;
   min-height: 100vh;
   background-color: var(--snow);
+  color: var(--pretty-black);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .p-30px{
@@ -61,12 +65,13 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 }
 #form-section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2.5rem;
   max-width: 400px;
   width: 100%;
 }
@@ -76,11 +81,12 @@ main{
   gap: 1rem;
   width: 100%;
 }
-.label-input input {
+.label-input input{
   display: flex;
   align-items: center;
   padding: 1rem;
   border-radius: 10px;
+  border: 2px solid #00000000;
   background: #f4f4f4;
   box-shadow:
     inset 9px 9px 12px #e0e0e0,
@@ -88,20 +94,31 @@ main{
     9px 9px 12px #e0e0e000,
     -9px -9px 12px #ffffff00;
   transition:
-    border-radius 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease,
-    outline 0.2s ease;
+    border-radius 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    outline 0.15s ease,
+    border 0.15s ease;
 }
-.label-input input:focus {
+.label-input label{
+  font-weight: 700;
+  text-shadow: var(--font-shadow);
+  color: var(--pretty-black-2);
+  font-size: 20px;
+}
+.label-input input:focus{
   border-radius: 10px;
-  background: #e0e0e0;
+  background: #f5f5f5;
   box-shadow:
     inset 9px 9px 12px #e0e0e000,
     inset -9px -9px 12px #ffffff00,
-    8px 8px 15px #a1a1a1,
+    8px 8px 15px #dbdbdb,
     -8px -8px 15px #ffffff;
-  outline: 2px solid var(--outline-pink);
+  outline: 4px solid var(--outline-dim-pink-dimopasity);
+  border: 2px solid var(--outline-pink);
+}
+.label-input input:hover{
+  border: 2px solid var(--outline-pink)
 }
 footer{
     border-top: var(--border-5px-solid-amber-flame);

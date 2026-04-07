@@ -4,29 +4,30 @@
   box-sizing: border-box;
 }
 :root{
---deep-teal: #70877fff;
---snow: #f4f4f4;
---dim-snow: #F2F2F2;
---twilight-indigo: #454372ff;
---space-indigo: #2f2963ff;
---amber-flame: #F2A922;
---amber-yellow: #F2E205;
---dim-purple: #653a99;
---ocean-blue: #492699;
---outline-pink: #B899DB;
---outline-dim-pink-dimopasity: #c6aae9a8;
---dim-ocean-blue: #201140;
 --pretty-black: #0D0D0D;
 --pretty-black-2: #1f1f1f;
+--dim-ocean-blue: #201140;
+--space-indigo: #2f2963ff;
+--ocean-blue: #492699;
+--twilight-indigo: #454372ff;
+--dim-purple: #653a99;
+--outline-pink: #B899DB;
+--outline-dim-pink-66percent_opacity: #c6aae9a8;
+--deep-teal: #70877fff;
+--amber-flame: #F2A922;
+--amber-yellow: #F2E205;
+--dim-snow: #F2F2F2;
+--snow: #f4f4f4;
+/* Extras */
 --border-5px-solid-amber-flame: 5px solid var(--amber-flame);
 --font-shadow: 0 2px 15px #00000033;
+}
 input, button{
   all: unset;
   box-sizing: border-box;
 }
 button {
   cursor: pointer;
-}
 }
 body{
   display: flex;
@@ -114,7 +115,7 @@ main{
     inset -9px -9px 12px #ffffff00,
     8px 8px 15px #dbdbdb,
     -8px -8px 15px #ffffff;
-  outline: 4px solid var(--outline-dim-pink-dimopasity);
+  outline: 4px solid var(--outline-dim-pink-66percent_opacity);
   border: 2px solid var(--outline-pink);
 }
 .label-input input:hover{

@@ -160,7 +160,7 @@ footer {
 .page-recover form {
   margin-top: 1rem;
   gap: 3rem;
-  max-width: 400px;
+  max-width: min(80vw, 400px);
   width: 100%;
   display: flex;
   flex-direction: column;

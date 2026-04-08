@@ -71,7 +71,8 @@ body {
 }
 
 .page-signin #header-logo {
-  margin: 2rem;
+  width: min(80vw, 400px);
+  margin: 2rem 0;
 }
 
 main {

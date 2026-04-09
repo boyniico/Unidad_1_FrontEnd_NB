@@ -15,7 +15,10 @@
   --outline-pink: #B899DB;
   --outline-dim-pink-66percent_opacity: #c6aae9a8;
   --deep-teal: #70877fff;
+  --green-clients: #4b7bb9;
+  --green-clientes-dim: #66a0c4;
   --amber-flame: #F2A922;
+  --dim-amber-flame: #f8890b;
   --amber-yellow: #F2E205;
   --dim-snow: #F2F2F2;
   --dim-snow--lowopacity: rgba(242, 242, 242, 0.681);
@@ -369,4 +372,39 @@ footer {
 
 #signup-a:hover {
   color: var(--amber-flame);
+}
+.dashboard header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dim-snow);
+  width: 100%;
+}
+.dashboard header div {
+  display: flex;
+  gap: 4rem;
+}
+.dashboard header img {
+  height: 6vh;
+  margin-left: 1rem;
+}
+.dashboard-client header{
+  background: linear-gradient(to left, var(--green-clients), var(--green-clientes-dim));
+}
+.dashboard header nav {
+  height: 100%;
+}
+.dashboard header nav ul {
+  display: flex;
+  gap: 4rem;
+}
+.dashboard header nav ul li {
+  all: unset;
+}
+.dashboard header nav ul li a {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
 }

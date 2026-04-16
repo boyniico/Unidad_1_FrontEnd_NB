@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SportClub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-signin bg-gradient-135deg-dim-purple-ocean-blue">
+    <a href="#">
+        <img id="header-logo" src="images/logo.png" alt="SportClub Logo" />
+    </a>
+
+    <main>
+        <form class="login-card">
+            <h1>Welcome to SportClub!</h1>
+
+            <div class="label-input">
+                <label for="input-email">Email:</label>
+                <input type="email" id="input-email" name="email" autocomplete="off" spellcheck="false" placeholder="your@email.com">
+            </div>
+
+            <div class="label-input">
+                <label for="input-password">Password:</label>
+                <input type="password" id="input-password" name="password" placeholder="••••••••••••••••">
+            </div>
+
+            <button type="submit" class="btn-primary">Log In</button>
+
+            <div class="login-links">
+                <a class="auth-link" href="recover-page.html" target="_blank">Forgot your password?</a>
+                <p>Dont have an account? <a class="auth-link" href="signup-page.html">Sign Up!</a></p>
+            </div>
+        </form>
+
+        <div>
+            <button class="back-btn"><a href="#">Go back</a></button>
+            <button class="back-btn"><a href="dashboard-cliente.html">Client</a></button>
+            <button class="back-btn"><a href="dashboard-coach.html">Coach</a></button>
+            <button class="back-btn"><a href="dashboard-admin.html">Admin</a></button>
+        </div>
+    </main>
+
+    <footer class="p-30px width-100percent">
+        <p>Made by Nicolás Bustamante, 2026</p>
+    </footer>
+</body>
+</html>

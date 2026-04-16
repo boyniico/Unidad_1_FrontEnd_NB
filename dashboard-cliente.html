@@ -3,27 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente - SportClub</title>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Clients - SportClub</title>
 </head>
-<body class="dashboard dashboard-client">
-    <header>
-        <div>
-            <img src="images/logo.png">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Perfil</a></li>
-            </ul>
-        </nav>
+<body id="client-start" class="client dashboard">
+    <header class="dash-header client-header">
+        <img src="images/logo.png" alt="SportClub logo">
     </header>
-    <main>
 
+    <nav class="dash-nav client-nav">
+        <a href="#client-start">Inicio</a>
+        <a href="#client-profile">Mi perfil</a>
+        <a href="#client-reservation">Reservas</a>
+        <a href="#client-available-classes">Clases disponibles</a>
+        <a href="index.html">Cerrar sesión</a>
+    </nav>
+
+    <main class="dash-main client-main">
+        <section id="client-profile" class="dashboard-section">
+            <h1 class="dashboard-section-h1">Mi perfil</h1>
+            <div class="flex-direction--row">
+                <img id="profile-picture" src="images/dashboard-images/profile-picture.png" alt="Foto de perfil">
+                <div class="info-profile">
+                    <h1>Esteban Piñones</h1>
+                    <p>esteban.pinones@email.com</p>
+                    <div><a href="#">Editar perfil</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="client-reservation" class="dashboard-section">
+            <h1 class="dashboard-section-h1">Mis reservas</h1>
+            <ul>
+                <li>Fútbol Infantil – Lunes 17:00</li>
+                <li>Básquetbol Inicial – Lunes 18:30</li>
+                <li>Natación Técnica – Miércoles 16:00</li>
+                <li>Lucha – Viernes 18:00</li>
+                <li>Preparación Física – Viernes 19:30</li>
+            </ul>
+        </section>
+
+        <section id="client-available-classes" class="dashboard-section">
+            <h1 class="dashboard-section-h1">Clases disponibles</h1>
+            <div class="available-classes">
+                <article class="class-card">
+                    <h2>Fútbol Juvenil</h2>
+                    <p>Lunes y jueves · 17:00</p>
+                    <p>Cupos disponibles</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+                <article class="class-card">
+                    <h2>Básquetbol Inicial</h2>
+                    <p>Lunes · 18:30</p>
+                    <p>Nivel: Principiante</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+                <article class="class-card">
+                    <h2>Boxeo Juvenil</h2>
+                    <p>Martes · 19:00</p>
+                    <p>Nivel: Intermedio</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+                <article class="class-card">
+                    <h2>Vóley Mixto</h2>
+                    <p>Martes · 17:30</p>
+                    <p>Cupos disponibles</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+                <article class="class-card">
+                    <h2>Natación Técnica</h2>
+                    <p>Miércoles · 16:00</p>
+                    <p>Nivel: Intermedio</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+                <article class="class-card">
+                    <h2>Taekwondo Básico</h2>
+                    <p>Miércoles · 18:00</p>
+                    <p>Nivel: Inicial</p>
+                    <a href="#">Reservar cupo</a>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

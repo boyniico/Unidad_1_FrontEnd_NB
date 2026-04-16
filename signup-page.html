@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Sign Up | SportClub</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page-signup">
-    <header id="main-header" class="header p-30px width-100percent bg-gradient-135deg-dim-purple-ocean-blue">
-        <a href="#">
-            <img id="header-logo" src="images/logo.png" alt="SportClub Logo"/>
+    <header id="main-header" class="p-30px width-100percent bg-gradient-135deg-dim-purple-ocean-blue">
+        <a href="landing-page.html">
+            <img id="header-logo" src="images/logo.png" alt="SportClub Logo" />
         </a>
     </header>
-    
+
     <main>
         <section id="form-section" class="p-30px">
             <form class="signup-form">
                 <div id="title-anchor">
-                <h1>Create your account</h1>
-                <p>You already have an account? <a id="signup-a" href="index.html">Sign In!</a></p>
+                    <h1>Create your account</h1>
+                    <p>You already have an account? <a id="signup-a" class="auth-link" href="index.html">Sign In!</a></p>
                 </div>
+
                 <div class="label-input">
                     <label for="input-name">Name:</label>
                     <input type="text" id="input-name" name="name" placeholder="Enter your name" required>
                 </div>
-                
+
                 <div class="label-input">
                     <label for="input-last-name">Last name:</label>
                     <input type="text" id="input-last-name" name="last-name" placeholder="Enter your last name" required>
                 </div>
-                
+
                 <div class="label-input">
                     <label for="input-birthday">Birthday:</label>
                     <input type="date" id="input-birthday" name="birthday" required>
                 </div>
-                
+
                 <div class="label-input">
                     <label for="input-email">Email:</label>
                     <input type="email" id="input-email" name="email" autocomplete="off" spellcheck="false" placeholder="Enter your email" required>
                 </div>
-                
+
                 <div class="label-input">
                     <label for="input-password">Password:</label>
                     <input type="password" id="input-password" name="password" autocomplete="new-password" placeholder="Set your password" required>
@@ -54,7 +55,7 @@
             </form>
         </section>
     </main>
-    
+
     <footer class="p-30px width-100percent bg-gradient-135deg-dim-purple-ocean-blue">
         <p>Made by Nicolás Bustamante, 2026</p>
     </footer>

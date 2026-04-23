@@ -670,3 +670,26 @@ footer {
 .admin .class-card h2 {
     color: var(--admin-red);
 }
+
+#errorLoginMessage {
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    min-height: 24px;
+}
+
+#errorLoginMessage.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.coach #name-user, .admin #name-user {
+    color: white;
+    align-self: center;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}

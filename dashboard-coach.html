@@ -18,6 +18,7 @@
         <a href="#coach-schedule">Horario</a>
         <a href="#">Editar perfil</a>
         <a href="index.html">Cerrar sesión</a>
+        <h3 id="name-user"></h3>
     </nav>
 
     <main class="dash-main coach-main">
@@ -50,5 +51,13 @@
             </ul>
         </section>
     </main>
+    <script>
+        const user = JSON.parse(localStorage.getItem("user"));
+        
+        if (user) {
+            document.querySelector("#name-user").textContent = 
+                `${user.nombre} ${user.apellido}`;
+        }
+    </script>
 </body>
 </html>

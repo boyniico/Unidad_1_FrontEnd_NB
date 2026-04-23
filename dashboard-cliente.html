@@ -24,9 +24,9 @@
             <h1 class="dashboard-section-h1">Mi perfil</h1>
             <div class="flex-direction--row">
                 <img id="profile-picture" src="images/dashboard-images/profile-picture.png" alt="Foto de perfil">
-                <div class="info-profile">
-                    <h1>Esteban Piñones</h1>
-                    <p>esteban.pinones@email.com</p>
+                <div id="info-profile" class="info-profile">
+                    <h1 id="name-user"></h1>
+                    <p></p>
                     <div><a href="#">Editar perfil</a></div>
                 </div>
             </div>
@@ -85,5 +85,16 @@
             </div>
         </section>
     </main>
+    <script>
+        const user = JSON.parse(localStorage.getItem("user"));
+        
+        if (user) {
+            document.querySelector("#name-user").textContent = 
+                `${user.nombre} ${user.apellido}`;
+            
+            document.querySelector("#client-profile p").textContent = 
+                user.email;
+        }
+    </script>
 </body>
 </html>

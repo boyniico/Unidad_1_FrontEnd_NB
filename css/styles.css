@@ -642,6 +642,242 @@ footer {
     color: var(--admin-red);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#admin-profile,
+#edit-profile-form,
+#admin-users,
+#admin-reports,
+#admin-settings {
+    scroll-margin-top: 100px;
+}
+
+#admin-profile .flex-direction--row {
+    align-items: stretch;
+}
+
+#admin-profile img#profile-picture {
+    width: min(220px, 100%);
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--snow);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+#admin-profile .info-profile {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background-color: #fff;
+    border: 2px solid var(--admin-red--border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+#admin-profile #name-user {
+    color: var(--admin-red);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin: 0;
+    align-self: flex-start;
+}
+
+#admin-profile p {
+    font-size: 1.05rem;
+    color: var(--pretty-black);
+}
+
+#admin-profile div a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    text-decoration: none;
+    background-color: var(--admin-red);
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    border-radius: 14px;
+    color: var(--snow);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+#admin-profile div a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgb(0 0 0 / .1);
+}
+
+#edit-profile-form {
+    background-color: var(--snow);
+}
+
+#edit-profile-form .signup-form {
+    align-items: stretch;
+    gap: 2rem;
+}
+
+#edit-profile-form .btn-primary {
+    max-width: 280px;
+    align-self: flex-start;
+}
+
+#admin-users .dash-list li {
+    padding-top: 1rem;
+    border-top: 2px solid var(--admin-red--border);
+    color: var(--admin-red);
+    font-size: 1.15rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    text-transform: capitalize;
+}
+
+.badge-user {
+    background-color: var(--client-blue);
+}
+
+.badge-coach {
+    background-color: var(--coach-green);
+}
+
+.badge-admin {
+    background-color: var(--admin-red);
+}
+
+#client-profile,
+#coach-profile,
+#edit-profile-form {
+    scroll-margin-top: 100px;
+}
+
+#client-profile .flex-direction--row {
+    align-items: stretch;
+}
+
+#client-profile img#profile-picture {
+    width: min(220px, 100%);
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--snow);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+#client-profile .info-profile {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background-color: #fff;
+    border: 2px solid var(--client-blue--border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+#client-profile #name-user {
+    color: var(--client-blue);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin: 0;
+    align-self: flex-start;
+}
+
+#client-profile p {
+    font-size: 1.05rem;
+    color: var(--pretty-black);
+}
+
+#coach-profile .flex-direction--row {
+    align-items: stretch;
+}
+
+#coach-profile img#profile-picture {
+    width: min(220px, 100%);
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: var(--snow);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+#coach-profile .info-profile {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background-color: #fff;
+    border: 2px solid var(--coach-green--border);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+#coach-profile #name-user {
+    color: var(--coach-green);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin: 0;
+    align-self: flex-start;
+}
+
+#coach-profile p {
+    font-size: 1.05rem;
+    color: var(--pretty-black);
+}
+
+#edit-profile-form {
+    background-color: var(--snow);
+}
+
+#edit-profile-form .signup-form {
+    align-items: stretch;
+    gap: 2rem;
+}
+
+#edit-profile-form .btn-primary {
+    max-width: 280px;
+    align-self: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
 .summary-card {
     border-radius: 15px;
     padding: 1.2rem;
@@ -671,25 +907,59 @@ footer {
     color: var(--admin-red);
 }
 
-#errorLoginMessage {
-    color: red;
-    font-weight: bold;
+.form-message {
+    width: 100%;
+    min-height: 24px;
+    margin-top: -1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-    min-height: 24px;
 }
 
-#errorLoginMessage.show {
+.form-message.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.coach #name-user, .admin #name-user {
-    color: white;
+.form-message.error {
+    color: #c94f4f;
+}
+
+.form-message.success {
+    color: #2e8b57;
+}
+
+.input-error {
+    border: 2px solid #c94f4f !important;
+    outline: 3px solid rgba(201, 79, 79, 0.2) !important;
+}
+
+.coach #name-user,
+.admin #name-user {
     align-self: center;
     margin-left: 1rem;
     font-size: 1.5rem;
+}
+
+#changePasswordForm {
+    margin-top: 1rem;
+    gap: 2rem;
+    max-width: min(90vw, 480px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#changePasswordForm h1 {
+    align-self: flex-start;
+    font-size: 30px;
+}
+
+#changePasswordMessage {
+    margin-top: -0.5rem;
 }

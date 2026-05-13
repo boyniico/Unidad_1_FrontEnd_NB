@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,80 @@
 
     <nav class="dash-nav coach-nav">
         <a href="#coach-start">Inicio</a>
+        <a href="#coach-profile">Mi perfil</a>
+        <a href="#edit-profile-form">Editar Perfil</a>
         <a href="#coach-students">Alumnos</a>
         <a href="#coach-classes">Clases</a>
         <a href="#coach-schedule">Horario</a>
-        <a href="#">Editar perfil</a>
         <a href="index.html">Cerrar sesión</a>
-        <h3 id="name-user"></h3>
+        <a href="recover-page.html">Cambiar Contraseña</a>
     </nav>
 
     <main class="dash-main coach-main">
+        <section id="coach-profile" class="dashboard-section">
+            <h1 class="dashboard-section-h1">Mi perfil</h1>
+
+            <div class="flex-direction--row">
+                <img id="profile-picture" src="images/dashboard-images/profile-picture.png" alt="Foto de perfil">
+
+                <div id="info-profile" class="info-profile">
+                    <h2 id="name-user">Cargando...</h2>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <span id="profile-email">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Rol:</strong>
+                        <span id="profile-role">Cargando...</span>
+                    </p>
+
+                    <p>
+                        <strong>Fecha de nacimiento:</strong>
+                        <span id="profile-birth-date">Cargando...</span>
+                    </p>
+                </div>
+            </div>
+
+            <p id="profileLoadMessage" class="form-message"></p>
+        </section>
+
+        <section id="edit-profile-form" class="dashboard-section">
+            <h1 class="dashboard-section-h1">Editar perfil</h1>
+
+            <form id="profileForm" class="signup-form">
+                <div class="label-input">
+                    <label for="profile-name">Nombre completo</label>
+                    <input type="text" id="profile-name" name="full_name">
+                </div>
+
+                <div class="label-input">
+                    <label for="profile-email-input">Email</label>
+                    <input type="email" id="profile-email-input" name="email" disabled>
+                </div>
+
+                <div class="label-input">
+                    <label for="profile-role-input">Rol</label>
+                    <input type="text" id="profile-role-input" name="role" disabled>
+                </div>
+
+                <div class="label-input">
+                    <label for="profile-birth-date-input">Fecha de nacimiento</label>
+                    <input type="date" id="profile-birth-date-input" name="birth_date">
+                </div>
+
+                <button type="submit" id="saveProfileButton" class="btn-primary">
+                    Guardar cambios
+                </button>
+
+                <p id="profileMessage" class="form-message"></p>
+            </form>
+        </section>
+
         <section id="coach-students" class="dashboard-section">
             <h1 class="dashboard-section-h1">Mis alumnos</h1>
+
             <ul class="dash-list">
                 <li><strong>Esteban Piñones</strong><br>esteban.pinones@email.com</li>
                 <li><strong>Martina Rojas</strong><br>martina.rojas@email.com</li>
@@ -34,6 +97,7 @@
 
         <section id="coach-classes" class="dashboard-section">
             <h1 class="dashboard-section-h1">Clases asignadas</h1>
+
             <ul class="dash-list">
                 <li>Entrenamiento funcional – Martes 19:00</li>
                 <li>Boxeo juvenil – Miércoles 18:00</li>
@@ -43,6 +107,7 @@
 
         <section id="coach-schedule" class="dashboard-section">
             <h1 class="dashboard-section-h1">Mi horario</h1>
+
             <ul class="dash-list">
                 <li>Lunes – 17:00 a 19:00</li>
                 <li>Martes – 19:00 a 20:30</li>
@@ -51,13 +116,7 @@
             </ul>
         </section>
     </main>
-    <script>
-        const user = JSON.parse(localStorage.getItem("user"));
-        
-        if (user) {
-            document.querySelector("#name-user").textContent = 
-                `${user.nombre} ${user.apellido}`;
-        }
-    </script>
+
+    <script src="js/profile.js"></script>
 </body>
 </html>

@@ -1,20 +1,15 @@
-const usuarios = [
-    { email: "sebastian@sportclub.com", password: "1234", nombre: "Sebastián", apellido: "Rojas", rol: "cliente" },
-    { email: "valentina@sportclub.com", password: "5678", nombre: "Valentina", apellido: "Muñoz", rol: "cliente" },
-
-    { email: "coach1@sportclub.com", password: "coach123", nombre: "Martín", apellido: "González", rol: "coach" },
-    { email: "coach2@sportclub.com", password: "coach456", nombre: "Camila", apellido: "Herrera", rol: "coach" },
-
-    { email: "admin1@sportclub.com", password: "admin123", nombre: "Nicolás", apellido: "Bustamante", rol: "admin" },
-    { email: "admin2@sportclub.com", password: "admin456", nombre: "Fernanda", apellido: "Soto", rol: "admin" }
-];
-
-document.getElementById("login-card").addEventListener("submit", function (e) {
+document.getElementById("login-card").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const email = document.getElementById("input-email").value.trim();
     const password = document.getElementById("input-password").value.trim();
     const errorMessage = document.getElementById("errorLoginMessage");
+    const submitButton = document.querySelector("#login-card button[type='submit']");
+
+    errorMessage.textContent = "";
+    errorMessage.classList.remove("show");
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email === "" || password === "") {
         errorMessage.textContent = "Los campos son obligatorios.";
@@ -22,26 +17,54 @@ document.getElementById("login-card").addEventListener("submit", function (e) {
         return;
     }
 
-    const usuarioEncontrado = usuarios.find(usuario =>
-        usuario.email === email && usuario.password === password
-    );
-
-    if (!usuarioEncontrado) {
-        errorMessage.textContent = "Correo o contraseña incorrectos.";
+    if (!emailRegex.test(email)) {
+        errorMessage.textContent = "Ingresa un correo electrónico válido.";
         errorMessage.classList.add("show");
         return;
     }
 
-    errorMessage.textContent = "";
-    errorMessage.classList.remove("show");
+    try {
+        submitButton.disabled = true;
+        submitButton.textContent = "Ingresando...";
 
-    localStorage.setItem("user", JSON.stringify(usuarioEncontrado));
+        const response = await fetch("http://localhost:3000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
 
-    if (usuarioEncontrado.rol === "cliente") {
-        window.location.href = "dashboard-cliente.html";
-    } else if (usuarioEncontrado.rol === "coach") {
-        window.location.href = "dashboard-coach.html";
-    } else if (usuarioEncontrado.rol === "admin") {
-        window.location.href = "dashboard-admin.html";
+        const result = await response.json();
+
+        if (!response.ok || !result.ok || !result.data) {
+            errorMessage.textContent = result.message || "Correo o contraseña incorrectos.";
+            errorMessage.classList.add("show");
+            return;
+        }
+
+        const user = result.data.user;
+        const token = result.data.token;
+
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
+
+        if (user.role === "user") {
+            window.location.href = "dashboard-cliente.html";
+        } else if (user.role === "coach") {
+            window.location.href = "dashboard-coach.html";
+        } else if (user.role === "admin") {
+            window.location.href = "dashboard-admin.html";
+        } else {
+            errorMessage.textContent = "Rol de usuario no reconocido.";
+            errorMessage.classList.add("show");
+        }
+    } catch (error) {
+        console.error("ERROR FETCH:", error);
+        errorMessage.textContent = "No se pudo conectar con el servidor.";
+        errorMessage.classList.add("show");
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Iniciar sesión";
     }
 });
